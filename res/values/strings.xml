@@ -39,22 +39,22 @@
 
     <!-- Message in confirmation dialog informing user there is an unknown issue in Google Play
         services [CHAR LIMIT=NONE] -->
-    <string name="common_google_play_services_unknown_issue">Unknown issue with Google Play services.</string>
+    <string name="common_google_play_services_unknown_issue" msgid="4762332809710093730">Unknown issue with Google Play services.</string>
 
     <!-- Title of confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=40] -->
-    <string name="common_google_play_services_unsupported_title">Google Play services</string>
+    <string name="common_google_play_services_unsupported_title" msgid="6334768798839376943">Google Play services</string>
 
     <!-- Message in confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=NONE] -->
-    <string name="common_google_play_services_unsupported_text">Google Play services, which some of your applications rely on, is not supported by your device. Please contact the manufacturer for assistance.</string>
+    <string name="common_google_play_services_unsupported_text" msgid="3542578567569488671">Google Play services, which some of your applications rely on, is not supported by your device. Please contact the manufacturer for assistance.</string>
 
     <!-- Button in confirmation dialog for updating Google Play services [CHAR LIMIT=40] -->
     <string name="common_google_play_services_update_button" msgid="6556509956452265614">Update</string>
 
     <!-- Sign-in button text [CHAR LIMIT=15] -->
-    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text" msgid="9071884888741449141">Sign in</string>
 
     <!-- Long form sign-in button text [CHAR LIMIT=30] -->
-    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="common_signin_button_text_long" msgid="2429381841831957106">Sign in with Google</string>
 
   <!-- Auth client code resources (prefix with auth_client --><skip />
   <!--  Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=70] -->
