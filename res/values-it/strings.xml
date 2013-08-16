@@ -16,14 +16,4 @@
     <string name="common_google_play_services_update_button" msgid="8932944190611227642">"Aggiorna"</string>
     <string name="common_signin_button_text" msgid="9071884888741449141">"Accedi"</string>
     <string name="common_signin_button_text_long" msgid="2429381841831957106">"Accedi con Google"</string>
-
-  <!-- Auth client code resources (prefix with auth_client --><skip />
-  <!--  Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=70] -->
-  <string name="auth_client_availability_notification_title">Install/Update/Enable Google Play services</string>
-
-  <!--  Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=42] -->
-  <string name="auth_client_play_services_err_notification_msg">Google Play services error</string>
-
-  <!--  Requested by string saying which app requested the notification. [CHAR LIMIT=42] -->
-  <string name="auth_client_requested_by_msg">Requested by <xliff:g id="app_name">%1$s</xliff:g></string>
 </resources>
