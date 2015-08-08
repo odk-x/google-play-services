@@ -1,0 +1,67 @@
+/**************************************************************************************************
+                                        GRADLE CONFIG
+ *************************************************************************************************/
+
+if ((new File(gradle.local)).exists()) { // TODO: This is very strange
+    def localPath = '../' + gradle.local // Shouldn't need to append ../ not consistent
+    apply from: localPath
+} else {
+    apply from: gradle.remote
+}
+
+libraryScripts.each {
+    apply from: it
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+group 'org.opendatakit'
+version 'latest'
+
+android {
+    // The following are set in the common.gradle file
+    compileSdkVersion(compileVersion)
+    buildToolsVersion(buildTools)
+
+    defaultConfig {
+        minSdkVersion(8)
+        targetSdkVersion(targetVersion)
+        versionCode(3136110)
+        versionName("3.1.36 (673201-10)")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled(minify)
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        snapshot {
+            // Build type for snapshots
+        }
+        debug {
+            testCoverageEnabled(testCoverage) // Allows AndroidTest JaCoCo reports to be generated
+        }
+    }
+
+    packagingOptions { // Pick first occurrence of any files that cause conflicts, as defined in common.gradle
+        packageList.each {
+            pickFirst it
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+
+    // Testing dependencies
+    testCompile 'junit:junit:4.12'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact bundleRelease
+        }
+    }
+}
