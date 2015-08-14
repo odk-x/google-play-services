@@ -16,6 +16,7 @@ libraryScripts.each {
 apply plugin: 'com.android.library'
 
 releaseVersionCode = playServicesVersion
+group = groupId
 
 android {
     // The following are set in the common.gradle file
