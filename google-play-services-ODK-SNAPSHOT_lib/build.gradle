@@ -2,7 +2,7 @@
                                         GRADLE CONFIG
  *************************************************************************************************/
 
-if ((new File(gradle.local)).exists()) { // TODO: This is very strange
+if ((new File(gradle.local)).exists()) {
     apply from: gradle.local
 } else {
     apply from: gradle.remote
@@ -34,9 +34,6 @@ android {
             minifyEnabled(minify)
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
-        snapshot {
-            // Build type for snapshots
-        }
         debug {
             testCoverageEnabled(testCoverage) // Allows AndroidTest JaCoCo reports to be generated
         }
@@ -46,6 +43,18 @@ android {
         packageList.each {
             pickFirst it
         }
+    }
+
+    compileOptions {
+        sourceCompatibility javaVersion
+        targetCompatibility javaVersion
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        cacheDynamicVersionsFor(0, 'seconds')
+        cacheChangingModulesFor(0, 'seconds')
     }
 }
 
