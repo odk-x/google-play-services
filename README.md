@@ -2,7 +2,7 @@
 
 This project is __*actively maintained*__
 
-This is a library project used by ODK Collect and the ODK 2.0 Android tools. 
+This is a library project used by the ODK 2.0 Android tools. 
 A playservices library project ships (and changes) with each Android SDK. This is
 the version the ODK code uses.
 
